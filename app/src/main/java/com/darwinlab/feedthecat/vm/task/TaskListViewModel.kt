@@ -8,6 +8,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
+/**
+ *  ViewModel со списком задач
+ *  На начальном этапе содержит только строку. Дальше добавим списки
+ */
 class TaskListViewModel : ViewModel() {
     private var repoTask : RepoTask = RepoTask()
     private val _text = MutableLiveData<String>().apply {

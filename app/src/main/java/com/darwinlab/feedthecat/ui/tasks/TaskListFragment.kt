@@ -11,8 +11,12 @@ import androidx.lifecycle.ViewModelProvider
 import com.darwinlab.feedthecat.R
 import com.darwinlab.feedthecat.vm.task.TaskListViewModel
 
+/**
+ * Фрагмент со списком задач.
+ * На начальном этапе содержит только строку
+ * Закинули параметр с навигатора в репозиторий. Обновили(вернули с репозитория) строку.
+ */
 class TaskListFragment : Fragment() {
-
     private lateinit var taskListViewModel: TaskListViewModel
 
     override fun onCreateView(
