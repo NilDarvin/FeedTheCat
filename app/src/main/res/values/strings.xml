@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Feed The Cat</string>
+    <string name="title_today">Today</string>
+    <string name="title_on_the_week">On the week</string>
+    <string name="title_afterwards">Afterwards</string>
+    <string name="title_inbox">Inbox</string>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_today"
+        android:icon="@drawable/ic_baseline_star_border_24"
+        android:title="@string/title_today" />
+
+    <item
+        android:id="@+id/navigation_on_the_week"
+        android:icon="@drawable/ic_calendar_week_24"
+        android:title="@string/title_on_the_week" />
+
+    <item
+        android:id="@+id/navigation_afterwards"
+        android:icon="@drawable/ic_calendar_plus_24"
+        android:title="@string/title_afterwards" />
+
+    <item
+        android:id="@+id/navigation_inbox"
+        android:icon="@drawable/ic_baseline_move_to_inbox_24"
+        android:title="@string/title_inbox" />
+
+</menu>

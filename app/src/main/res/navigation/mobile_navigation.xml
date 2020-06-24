@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_today">
+
+    <fragment
+        android:id="@+id/navigation_today"
+        android:name="com.darwinlab.feedthecat.ui.tasks.TaskListFragment"
+        android:label="@string/title_today"
+        tools:layout="@layout/fragment_task_list" >
+        <argument
+            android:name="status"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_on_the_week"
+        android:name="com.darwinlab.feedthecat.ui.tasks.TaskListFragment"
+        android:label="@string/title_on_the_week"
+        tools:layout="@layout/fragment_task_list" >
+        <argument
+            android:name="status"
+            app:argType="integer"
+            android:defaultValue="2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_afterwards"
+        android:name="com.darwinlab.feedthecat.ui.tasks.TaskListFragment"
+        android:label="@string/title_afterwards"
+        tools:layout="@layout/fragment_task_list">
+        <argument
+            android:name="status"
+            app:argType="integer"
+            android:defaultValue="3" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_inbox"
+        android:name="com.darwinlab.feedthecat.ui.tasks.TaskListFragment"
+        android:label="@string/title_inbox"
+        tools:layout="@layout/fragment_task_list" >
+        <argument
+            android:name="status"
+            app:argType="integer"
+            android:defaultValue="4" />
+    </fragment>
+</navigation>
