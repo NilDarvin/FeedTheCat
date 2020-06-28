@@ -5,23 +5,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import com.darwinlab.feedthecat.R
 import com.darwinlab.feedthecat.vm.task.TaskListViewModel
+import dagger.android.support.DaggerFragment
+import javax.inject.Inject
 
-class TaskListFragment : Fragment() {
-
-    private lateinit var taskListViewModel: TaskListViewModel
+class TaskListFragment: DaggerFragment(){
+      lateinit var taskListViewModel: TaskListViewModel
+          @Inject set
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        taskListViewModel =
-                ViewModelProvider(this).get(TaskListViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_task_list, container, false)
         val textView: TextView = root.findViewById(R.id.text)
         taskListViewModel.text.observe(viewLifecycleOwner, Observer {

@@ -1,15 +1,18 @@
 package com.darwinlab.feedthecat.vm.task
 
+import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import com.darwinlab.feedthecat.MyApplication
 import com.darwinlab.feedthecat.model.RepoTask
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class TaskListViewModel : ViewModel() {
-    private var repoTask : RepoTask = RepoTask()
+class TaskListViewModel
+    @Inject
+    constructor(application: MyApplication, private val repoTask : RepoTask) : BaseViewModel(application)  {
     private val _text = MutableLiveData<String>().apply {
         value = ""
     }
